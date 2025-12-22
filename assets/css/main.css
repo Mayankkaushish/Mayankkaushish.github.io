@@ -2006,15 +2006,29 @@ input, select, textarea {
 		ol li {
 			padding-left: 0.25em;
 		}
-
 	ul {
 		list-style: disc;
-		padding-left: 1em;
+		padding-left: 1.5em;     /* adds balanced space for bullets */
+		margin-top: 0.5em;       /* reduce big gap above list */
+		margin-bottom: 0.5em;    /* reduce big gap below list */
+		list-style-position: outside;
+		}
+
+		ul li {
+		padding-left: 0;         /* keeps text aligned nicely */
+		margin: 0.25em 0;        /* tightens space between items */
+		line-height: 1.4em;      /* keeps lines evenly spaced */
+		}
+	
+
+	/* ul {
+		list-style: disc;
+		padding-left: 0em;
 	}
 
 		ul li {
-			padding-left: 0.5em;
-		}
+			padding-left: 0em;
+		} */
 
 /* Icons */
 
@@ -2526,7 +2540,8 @@ input, select, textarea {
 
 	#banner {
 		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: #645862;
+		/* background-color: #645862; */
+		background-color: #404E3B;
 		background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
 		background-position: bottom left, bottom right, top left, top center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
@@ -2546,8 +2561,9 @@ input, select, textarea {
 			-webkit-animation-fill-mode: forwards;
 			-ms-animation-fill-mode: forwards;
 			animation-fill-mode: forwards;
-			background: rgba(52, 27, 43, 0.5);
-			color: #fff;
+			/* background: rgba(250, 240, 230, 0.5); */
+			background: #E6E6E6;
+			color: #000000;
 			display: inline-block;
 			opacity: 0;
 			padding: 3em;
@@ -2624,7 +2640,7 @@ input, select, textarea {
 
 	#cta {
 		background-attachment: scroll, scroll, scroll, fixed;
-		background-color: #645862;
+		background-color: #C0BEAF;
 		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../../images/banner.jpg");
 		background-position: top left, top right, top left, bottom center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
@@ -3337,5 +3353,28 @@ input, select, textarea {
 				width: 50px;
 				height: 34px;
 			}
+			/* Normalize learning area tiles */
+			.learning-tile {
+			display: block;
+			}
 
+			/* Science illustration has more internal whitespace */
+			.learning-tile.science-tile img {
+			transform: scale(1.12);
+			transform-origin: center center;
+			}
+
+			/* Ensure images always fill tile width */
+			.learning-tile img {
+			width: 100%;
+			height: auto;
+			display: block;
+			}
+
+			/* TEST: you should see a thick red border */
+			img.science-img { 
+			border: 8px solid red !important; 
+			}
+
+			
 	}

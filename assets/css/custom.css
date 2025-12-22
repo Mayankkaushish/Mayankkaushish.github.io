@@ -1,0 +1,127 @@
+/* --- Learning Areas image consistency --- */
+.wrapper.style3 .image.featured img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Science illustration has more internal whitespace → scale up slightly */
+img.science-img {
+  transform: scale(1.16);
+  transform-origin: center center;
+}
+/* .banner-note {
+  margin-top: 1.5em;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+  color: #4b0404;
+  opacity: 0;
+  animation: fadeText 4s ease-in-out infinite;
+}
+
+@keyframes fadeText {
+  0%, 100% { opacity: 0; }
+  30%, 70% { opacity: 0.9; }
+} */
+/* Make the banner message stand out */
+.banner-note {
+  margin-top: 1.5em;
+}
+
+.banner-highlight {
+  display: inline-block;
+  padding: 0.6em 1em;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  background: rgba(117, 6, 6, 0.18);  /* soft highlight */
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* subtle pulse to draw attention */
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+  50% { transform: scale(1.02); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+}
+
+.banner-highlight {
+  animation: pulseGlow 2.2s ease-in-out infinite;
+}
+/* Ensure nav is positioning context */
+#nav {
+  position: relative;
+}
+
+/* Make room so Contact Us doesn't wrap */
+#nav > ul {
+  padding-right: 1em;
+}
+
+/* Enquiries – top right, perfectly centered */
+#nav ul li.enquiries {
+  position: absolute;
+  right: 10.5em;          /* adjust if needed */
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+/* Phone icon */
+#nav ul li.enquiries .fa-phone {
+  font-size: 0.9em;
+  opacity: 0.9;
+  line-height: 1;
+  animation: phonePulse 2.5s ease-in-out infinite;
+}
+
+/* Phone number link */
+#nav ul li.enquiries a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.6);
+}
+
+#nav ul li.enquiries a:hover {
+  border-bottom-color: #fff;
+}
+
+/* Subtle attention animation */
+@keyframes phonePulse {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+/* Hide on mobile */
+@media screen and (max-width: 736px) {
+  #nav > ul {
+    padding-right: 0;
+  }
+  #nav ul li.enquiries {
+    display: none;
+  }
+}
+/* Force olive banner (remove the banner image layer) */
+#banner{
+  background-image: none !important;
+  background-color: #404E3B !important;
+}
+
+
+
+
+
+

@@ -6,31 +6,127 @@
 -->
 <html>
 	<head>
-		<title>Twenty by HTML5 UP</title>
+		<title>The Bright Side</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<style>
+			/* --- Polished Education Icon Bullet Lists for Learning Areas --- */
+			.wrapper.style3.container.special .col-6 section ul {
+				margin: 0.4em 0 !important;
+				padding-left: 0 !important;
+				list-style: none !important; /* remove default bullets */
+			}
+
+			.wrapper.style3.container.special .col-6 section ul li {
+				position: relative;
+				padding-left: 2em;        /* space for the icon */
+				margin: 0.4em 0;
+				line-height: 1.6em;
+				text-align: left;
+				font-size: 0.95em;
+			}
+
+			/* 🎓 Education icon before each list item */
+			.wrapper.style3.container.special .col-6 section ul li::before {
+				content: "🎓";
+				position: absolute;
+				left: 0;
+				top: 0.05em;
+				font-size: 1.1em;
+				color: #2563eb;           /* education blue accent */
+			}
+
+			/* reduce space below paragraphs */
+			.wrapper.style3.container.special .col-6 section p {
+				margin-bottom: 0.4em !important;
+			}
+			/* General body text */
+			body, input, select, textarea {
+				color: #333 !important;          /* darker grey for better readability */
+				font-weight: 400;                /* slightly stronger weight */
+				line-height: 1.75em;             /* keep comfortable spacing */
+			}
+
+			/* Paragraphs inside main sections */
+			.wrapper.style3.container.special .col-6 section p {
+				color: #222 !important;          /* rich dark text */
+				font-size: 1em;
+			}
+
+			/* Headings */
+			h2, h3, h4, h5 {
+				color: #111 !important;          /* stronger heading contrast */
+				font-weight: 700;
+			}
+
+			/* Optional: accent color for key phrases */
+			strong, em {
+				color: #111 !important;   /* near-black to match headings */
+				font-weight: 700;
+				text-decoration: none;
+			}
+
+			/* Make the education icon match the text tone */
+			.wrapper.style3.container.special .col-6 section ul li::before {
+				color: #111 !important;   /* same as text for a cohesive look */
+				opacity: 0.9;
+			}
+
+			/* Ensure regular links don't look bluish if you changed global colors */
+			.wrapper.style3.container.special a {
+				color: #111 !important;
+				text-decoration: underline;      /* readable, accessible */
+				text-underline-offset: 2px;
+			}
+			.wrapper.style3.container.special a:hover {
+				opacity: 0.8;
+			}
+			 /* === Fix image dullness and alignment in Learning Areas === */
+			.wrapper.style3.container.special .col-6 .image.featured img {
+				width: 100%;
+				height: auto;                /* keep natural proportions */
+				object-fit: cover;
+				object-position: center top; /* show faces better */
+				border-radius: 6px;
+				filter: brightness(1.05) contrast(1.1) saturate(1.15); /* brighten & sharpen */
+				transition: transform 0.4s ease, filter 0.4s ease;
+			}
+
+			/* Hover effect – gentle zoom and pop */
+			.wrapper.style3.container.special .col-6 .image.featured:hover img {
+				transform: scale(1.03);
+				filter: brightness(1.1) contrast(1.15) saturate(1.2);
+			}
+
+			/* Align columns from top */
+			.wrapper.style3.container.special .row {
+				align-items: flex-start !important;
+			}
+		</style>
+
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="index is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.html">Twenty <span>by HTML5 UP</span></a></h1>
+				 <header id="header" class="alt">
+					<h1 id="logo"><a href="index.html">The Bright Side<span></span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Welcome</a></li>
-							<li class="submenu">
-								<a href="#">Layouts</a>
+							<!-- <li class="current"><a href="index.html">Welcome</a></li> -->
+							<!-- <li class="submenu">
+								<a href="#">Menu</a>
 								<ul>
-									<li><a href="left-sidebar.html">Left Sidebar</a></li>
-									<li><a href="right-sidebar.html">Right Sidebar</a></li>
-									<li><a href="no-sidebar.html">No Sidebar</a></li>
-									<li><a href="contact.html">Contact</a></li>
-									<li class="submenu">
-										<a href="#">Submenu</a>
-										<ul>
+									<li><a href="left-sidebar.html">Learning Methods</a></li>
+									<li><a href="right-sidebar.html">About Us</a></li> -->
+									<!-- <li><a href="no-sidebar.html">No Sidebar</a></li> -->
+									<!-- <li><a href="contact.html">Contact</a></li>
+									<li class="submenu"> -->
+										<!-- <a href="#">Submenu</a> -->
+										<!-- <ul>
 											<li><a href="#">Dolore Sed</a></li>
 											<li><a href="#">Consequat</a></li>
 											<li><a href="#">Lorem Magna</a></li>
@@ -39,8 +135,12 @@
 										</ul>
 									</li>
 								</ul>
+							</li> -->
+							<li class="enquiries">
+							<span class="icon solid fa-phone-alt"></span>
+							Enquiries: <a href="tel:+614XXXXXXXX">0451041505</a>
 							</li>
-							<li><a href="#" class="button primary">Sign Up</a></li>
+							<li><a href="#contact" class="button primary scrolly">Contact Us</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -57,19 +157,23 @@
 					<div class="inner">
 
 						<header>
-							<h2>TWENTY</h2>
+							<h2>The Bright Side</h2>
 						</header>
-						<p>This is <strong>Twenty</strong>, a free
+						<p>Empowering Learning
 						<br />
-						responsive template
+						through
 						<br />
-						by <a href="http://html5up.net">HTML5 UP</a>.</p>
+						tailored tutoring <a href="http://html5up.net"></a>.</p>
 						<footer>
 							<ul class="buttons stacked">
-								<li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
+								<li><a href="#main" class="button fit scrolly">Explore Learning Areas</a></li>
 							</ul>
 						</footer>
-
+						<p class="banner-note">
+  							<span class="banner-highlight">
+   							 Online tutoring available anywhere • Face-to-face lessons in Doncaster and nearby suburbs
+							</span>
+						</p>
 					</div>
 
 				</section>
@@ -79,19 +183,17 @@
 
 					<header class="special container">
 						<span class="icon solid fa-chart-bar"></span>
-						<h2>As this is my <strong>twentieth</strong> freebie for HTML5 UP
-						<br />
-						I decided to give it a really creative name.</h2>
-						<p>Turns out <strong>Twenty</strong> was the best I could come up with. Anyway, lame name aside,
-						<br />
-						it's minimally designed, fully responsive, built on HTML5/CSS3,
-						and, like all my stuff,
-						<br />
-						released for free under the <a href="http://html5up.net/license">Creative Commons Attribution 3.0</a> license. Have fun!</p>
+						<h2><strong>About US</strong></h2>
+						<p>At <strong>The Bright Side</strong>, we believe every student learns best when they feel supported, confident, and understood. 
+    						Founded by a qualified secondary teacher with classroom experience in Maths and Science, our tutoring focuses on creating engaging, personalised learning experiences that build both skill and self-belief.
+  						</p><p>We provide tailored lessons for <strong>Maths (Years 4–10)</strong> and <strong>Science (Years 7–10)</strong>, using proven strategies to help students master key concepts and reach their academic goals. 
+							Whether your child needs to catch up, build confidence, or extend their learning, we create a plan that works for their individual pace and style.
+						</p><p>Our goal is to make learning a positive experience, helping every student discover their strengths and find joy in their progress.  
+							At <em>The Bright Side</em>, growth, understanding, and confidence shine together.</p>
 					</header>
 
 					<!-- One -->
-						<section class="wrapper style2 container special-alt">
+						<!-- <section class="wrapper style2 container special-alt">
 							<div class="row gtr-50">
 								<div class="col-8 col-12-narrower">
 
@@ -119,10 +221,10 @@
 
 								</div>
 							</div>
-						</section>
+						</section> -->
 
 					<!-- Two -->
-						<section class="wrapper style1 container special">
+						<!-- <section class="wrapper style1 container special">
 							<div class="row">
 								<div class="col-4 col-12-narrower">
 
@@ -158,40 +260,64 @@
 
 								</div>
 							</div>
-						</section>
+						</section> -->
 
 					<!-- Three -->
 						<section class="wrapper style3 container special">
 
 							<header class="major">
-								<h2>Next look at this <strong>cool stuff</strong></h2>
+								<h2><strong>Learning Areas</strong></h2>
 							</header>
 
 							<div class="row">
 								<div class="col-6 col-12-narrower">
 
 									<section>
-										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/pic01.jpg" alt="Mathematics" class="learning-img maths-img" /></a>
 										<header>
-											<h3>A Really Fast Train</h3>
+											<h3><strong>Mathematics (Years 4-10)</strong></h3>
 										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
+										<p>
+											Maths can feel challenging when the building blocks aren’t solid — but with the right guidance, every student can succeed.
+											Our maths sessions focus on strengthening core understanding, developing problem-solving strategies, and building real confidence. 
+											Lessons are tailored to each student’s learning pace and aligned with the Victorian Curriculum, ensuring strong results in areas such as:
+										</p>
+										<ul style="margin:0.3em 0; padding-left:1.5em; list-style-position:outside; line-height:1.4em;">
+											<li>Number skills and mental computation</li>
+											<li>Fractions, decimals, and algebra foundations</li>
+											<li>Geometry, measurement, and data interpretation</li>
+											<li>Exam and test preparation</li>
+										</ul>
+										<p>
+											Whether your child is catching up or aiming to extend their learning, we make maths engaging, logical, and achievable.
+										</p>
 									</section>
 
 								</div>
 								<div class="col-6 col-12-narrower">
 
 									<section>
-										<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="images/pic02.jpg" alt="Science" class="learning-img science-img" /></a>
 										<header>
-											<h3>An Airport Terminal</h3>
+											<h3><strong>Science (Years 7-10)</strong></h3>
 										</header>
-										<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper sed blandit lorem ipsum dolore.</p>
+										<p>Science is about curiosity — asking questions, exploring ideas, and making connections between what we learn and the world around us.
+											Our science tutoring helps students grasp key concepts through clear explanations, real-life examples, and hands-on thinking.
+											We focus on understanding, not memorisation, across key disciplines such as:
+										</p>
+										<ul>
+											<li>Biology – cells, body systems, genetics, ecosystems</li>
+											<li>Chemistry – elements, reactions, and atomic structure</li>
+											<li>Physics – forces, energy, motion, and waves</li>
+											<li>Earth & Space – geology, climate, and the universe</li>
+										</ul>
+										<p>
+											By connecting classroom learning with everyday life, we help students develop curiosity, confidence, and a lifelong interest in science.</p>
 									</section>
 
 								</div>
 							</div>
-							<div class="row">
+							<!-- <div class="row">
 								<div class="col-6 col-12-narrower">
 
 									<section>
@@ -214,19 +340,63 @@
 									</section>
 
 								</div>
-							</div>
+							</div> -->
 
-							<footer class="major">
+							<!-- <footer class="major">
 								<ul class="buttons">
 									<li><a href="#" class="button">See More</a></li>
 								</ul>
-							</footer>
+							</footer> -->
 
 						</section>
 
 				</article>
 
-			<!-- CTA -->
+				<section id="contact" class="wrapper style3 container special">
+				<header class="major">
+					<h2><strong>Contact Us</strong></h2>
+					<p>Send us a message and we’ll get back to you as soon as possible.</p>
+				</header>
+
+				<div class="row">
+					<div class="col-8 col-12-narrower">
+					<form method="POST" action="https://formspree.io/f/xqezbdry">
+						<div class="row gtr-50">
+						<div class="col-6 col-12-mobile">
+							<input type="text" name="name" placeholder="Your name" required />
+						</div>
+						<div class="col-6 col-12-mobile">
+							<input type="email" name="email" placeholder="Your email" required />
+						</div>
+						<div class="col-12">
+							<input type="text" name="student_year_level" placeholder="Student year level (e.g., Year 7)" />
+						</div>
+						<div class="col-12">
+							<textarea name="message" placeholder="Your message" rows="6" required></textarea>
+						</div>
+						<div class="col-12">
+							<ul class="buttons">
+							<li><button type="submit" class="button primary">Send Message</button></li>
+							</ul>
+						</div>
+						</div>
+					</form>
+					</div>
+
+					<div class="col-4 col-12-narrower">
+					<section>
+						<h3>Other ways to reach us</h3>
+						<p>
+						Email: <a href="mailto:YOUR_EMAIL@gmail.com">info@the brightside.au</a><br />
+						Contact: 0451041504
+						</p>
+					</section>
+					</div>
+				</div>
+				</section>
+
+			
+				<!-- CTA
 				<section id="cta">
 
 					<header>
@@ -240,7 +410,7 @@
 						</ul>
 					</footer>
 
-				</section>
+				</section> -->
 
 			<!-- Footer -->
 				<footer id="footer">
@@ -248,9 +418,9 @@
 					<ul class="icons">
 						<li><a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands circle fa-google-plus-g"><span class="label">Google+</span></a></li>
+						<!-- <li><a href="#" class="icon brands circle fa-google-plus-g"><span class="label">Google+</span></a></li>
 						<li><a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands circle fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon brands circle fa-dribbble"><span class="label">Dribbble</span></a></li> -->
 					</ul>
 
 					<ul class="copyright">
